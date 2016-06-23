@@ -8,15 +8,19 @@ public class testvalidateurl
 {
 
 	@Test
-	public void testValidateUrl()
+	public void goodUrlReturnsTrue()
 	{
 		//Good Url
 		Boolean isValid = Crawler.validateUrl("http://javahungry.blogspot.com/");
-		assertEquals(true,isValid);
-		
+		assertEquals(true,isValid);	
+
+	}
+	@Test
+	public void badUrlReturnsFalse()
+	{	
 		//Bad Url
-		Boolean isValid1 = Crawler.validateUrl("javahungry.blogspot.c");
-		assertEquals(false,isValid1);
+		Boolean isValid = Crawler.validateUrl("javahungry.blogspot.c");
+		assertEquals(false,isValid);
 	}
 
 }

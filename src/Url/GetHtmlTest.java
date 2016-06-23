@@ -8,7 +8,7 @@ public class GetHtmlTest
 {
 
 	@Test
-	public void test()
+	public void getHtmlFromUrlNotNull() throws Exception
 	{
 		//Make sure gethtml() returns content from url and is not still null value
 		String content = Crawler.getHtml("http://javahungry.blogspot.com/");
